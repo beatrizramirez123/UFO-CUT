@@ -16,6 +16,12 @@ public class Pontuacao : MonoBehaviour
         Recorde(); 
     }
 
+    public void Hit()
+    {
+        ++pontos;
+        guiText.text = pontos.ToString();
+
+    }
     public void Recorde()
     { 
         if (pontos > PlayerPrefs.GetInt("Recorde"))
