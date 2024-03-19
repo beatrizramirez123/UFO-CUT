@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        pontos = GameObject.Find
+        ponto = GameObject.Find();
     }
 
     void Start()
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collisor)
     {
-        if (collisor.tag == "letras")
+        if (collisor.tag == "PodeMata")
         {
             //score Hit();
             collisor.GetComponent<Item>().IntanciarDestruir();
