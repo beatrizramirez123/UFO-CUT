@@ -18,10 +18,10 @@ public class GerenciarCameta : MonoBehaviour
     {
         distanciaZ = transform.position.z - cam.transform.position.z;
         minX = cam.ScreenToWorldPoint(new Vector3(0, 0, distanciaZ)).x;
-        minX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, distanciaZ)).x;
+        maxX = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0, distanciaZ)).x;
 
-        minY = cam.ScreenToWorldPoint(new Vector3(0, 0, distanciaZ)).x;
-        minY = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, distanciaZ)).x;
+        minY = cam.ScreenToWorldPoint(new Vector3(0, 0, distanciaZ)).y;
+        maxY = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, distanciaZ)).y;
     }
 
     public static float MinY

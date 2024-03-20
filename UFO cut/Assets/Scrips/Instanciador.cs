@@ -4,57 +4,58 @@ using UnityEngine;
 
 public class Instanciador : MonoBehaviour
 {
-    public float minSpawTime;
-    public float maxSpawTime;
-    public float spawnItem;
-    private int index;
-
-    public GameObject[] Itens;
-    public GameObject item;
-
+    public float minSpawnTime;
+    public float maxSpawnTime;
     public float upForce = 400f;
-    public leftForce = 200f;
-    public float minX, maxX;
+    public float leftForce = 200f;
+    public GameObject[] items;
+
+    private float minX, maxX;
+    private Rigidbody2D itemRigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
         minX = GerenciarCameta.MinX();
         maxX = GerenciarCameta.MaxX();
+        StartCoroutine(InstanciadorCoroutine());
     }
 
     // Update is called once per frame
     private void Update()
     {
-
+        // Este método não tem implementação por enquanto, mas pode ser usado para atualizações futuras.
     }
 
     bool RandomItem()
     {
-        if (Itens.Length > 0)
-        {
-            index = Random.Range(0, Itens.Length);
-            return true;
-        }
-        return false;
+        return items.Length > 0;
     }
 
-    private IEnumerator Instanciador ()
+    private IEnumerator InstanciadorCoroutine()
     {
-        spawnItem = Random.Range(minSpawTime, maxSpawTime);
+        while (true)
+        {
+            float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
+            yield return new WaitForSeconds(spawnTime);
 
-        yield return new WaitForSeconds(spawnItem);
-        if (RandomItem())
-        {
-            item = Instantiate(Itens[index], new Vector2(Random.Range(min, max).transform.position.y)
-                , Quaternion.Euler(0, 0, Random.Range)(-60, 60)))as GameObject;
-        }
-        if (item.transform.position.x > 0)
-        {
-            item.rigidbody2D.AddForce(new Vector2(-leftForce,upForce));
-        }
-        else
-        {
+            if (RandomItem())
+            {
+                int index = Random.Range(0, items.Length);
+                GameObject item = Instantiate(items[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.identity) as GameObject;
 
+                itemRigidbody = item.GetComponent<Rigidbody2D>();
+                if (item.transform.position.x > 0)
+                {
+                    itemRigidbody.AddForce(new Vector2(-leftForce, upForce));
+                }
+                else
+                {
+                    itemRigidbody.AddForce(new Vector2(leftForce, upForce));
+                }
+            }
+
+            StartCoroutine(InstanciadorCoroutine());
         }
     }
 }
