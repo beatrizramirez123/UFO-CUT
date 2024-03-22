@@ -18,38 +18,52 @@ public class Item : MonoBehaviour
     public float green;
     public float blue;
 
-    public float minxY;
-    public float maxX;
+    public float minY;
+    public float maxY;
 
     private float rotDirecao = 50;
 
     // Start is called before the first frame update
     void Start()
     {
-        minxY = GerenciarCameta.MinX;
-        maxX = GerenciarCameta.MaxX;
+        minY = GerenciarCamera.MinX;
+        maxY = GerenciarCamera.MaxX;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Remover();
     }
+
+    public void Remover()
+    {
+        screen = Camera.main.WorldToScreenPoint(transform.position);
+        if (isDead && screen.y < minY)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            isDead = true;
+        }
+    }
+
     public void IntanciarDestruir()
     {
-        GameObject tempItem = null;
-        GameObject tempTinta = null;
+        GameObject tempItem = Instantiate(esquerdaItem, transform.position, transform.rotation);
+        Rigidbody2D tempItemRB = tempItem.GetComponent<Rigidbody2D>();
+        tempItemRB.AddForce(-transform.right * forca);
+        // tempItemRB.AddTorque(torque);
 
-        tempItem = Instantiate(esquerdaItem,transform.position, transform.rotation) as GameObject;
-        tempItem.rigidbody2D.AddForce (-transform.right * forca);
-        Debug.Log(transform.right);
-        //tempItem.rigidbody2D.AddTorque(torque);
+        tempItem = Instantiate(direitaItem, transform.position, transform.rotation);
+        tempItemRB = tempItem.GetComponent<Rigidbody2D>();
+        tempItemRB.AddForce(-transform.right * forca);
+        // tempItemRB.AddTorque(torque);
 
-        tempItem = Instantiate(direitaItem,transform.position, transform.rotation) as GameObject;
-        tempItem.rigidbody2D.AddForce (-transform.right * forca);
-        //tempItem.rigidbody2D.AddTorque(torque);
+        GameObject tempTinta = Instantiate(tinta, new Vector2(transform.position.x, transform.position.y), transform.rotation);
+        // tempTinta.GetComponent<tinta>().SetColor(red, green, blue, alpha);
 
-        tempTinta = Instantiate(tinta,new Vector2 (transform.position.x,transform.position.y),(transform.rotation), as GameObject;
+        Destroy(gameObject);
     }
-
 }

@@ -17,8 +17,8 @@ public class Instanciador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        minX = GerenciarCameta.MinX;
-        maxX = GerenciarCameta.MaxX;
+        minX = GerenciarCamera.MinX;
+        maxX = GerenciarCamera.MaxX;
         StartCoroutine(InstanciadorCoroutine());
     }
 
