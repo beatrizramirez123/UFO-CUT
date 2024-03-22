@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Instanciador : MonoBehaviour
 {
+
     public float minSpawnTime;
     public float maxSpawnTime;
     public float upForce = 400f;
@@ -16,15 +17,15 @@ public class Instanciador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        minX = GerenciarCameta.MinX();
-        maxX = GerenciarCameta.MaxX();
+        minX = GerenciarCameta.MinX;
+        maxX = GerenciarCameta.MaxX;
         StartCoroutine(InstanciadorCoroutine());
     }
 
     // Update is called once per frame
     private void Update()
     {
-        // Este método não tem implementação por enquanto, mas pode ser usado para atualizações futuras.
+       
     }
 
     bool RandomItem()

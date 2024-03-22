@@ -26,7 +26,7 @@ public class GerenciarCameta : MonoBehaviour
 
     public static float MinY
     {
-        get { return minY; }
+        get {return minY; }
        
     }
 

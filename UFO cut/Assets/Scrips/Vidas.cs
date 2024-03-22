@@ -6,7 +6,9 @@ public class Vidas : MonoBehaviour
 {
     public Texture2D[] Vida;
     private int TamanhoVidas;
-    private int index = 0;  
+    private int index = 0;
+    private object guiTexture;
+
     // Start is called before the first frame update
     void Start()
     {
