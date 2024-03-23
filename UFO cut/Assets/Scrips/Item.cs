@@ -49,17 +49,17 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void IntanciarDestruir()
+    public void InstanciarDestruir()
     {
         GameObject tempItem = Instantiate(esquerdaItem, transform.position, transform.rotation);
         Rigidbody2D tempItemRB = tempItem.GetComponent<Rigidbody2D>();
         tempItemRB.AddForce(-transform.right * forca);
-        // tempItemRB.AddTorque(torque);
+        tempItemRB.AddTorque(torque);
 
         tempItem = Instantiate(direitaItem, transform.position, transform.rotation);
         tempItemRB = tempItem.GetComponent<Rigidbody2D>();
         tempItemRB.AddForce(-transform.right * forca);
-        // tempItemRB.AddTorque(torque);
+        tempItemRB.AddTorque(torque);
 
         GameObject tempTinta = Instantiate(tinta, new Vector2(transform.position.x, transform.position.y), transform.rotation);
         // tempTinta.GetComponent<tinta>().SetColor(red, green, blue, alpha);

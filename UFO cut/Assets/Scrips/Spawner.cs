@@ -16,5 +16,6 @@ public class Spawner : MonoBehaviour
             Vector2 randomSpawnPosition = new Vector2(Random.Range(-2.5f, 3), 6);
             Instantiate(enemy, randomSpawnPosition, Quaternion.identity);
         }
+      
     }
 }
