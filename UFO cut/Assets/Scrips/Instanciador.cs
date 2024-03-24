@@ -35,8 +35,7 @@ public class Instanciador : MonoBehaviour
 
     private IEnumerator InstanciadorCoroutine()
     {
-        while (true)
-        {
+        
             float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
             yield return new WaitForSeconds(spawnTime);
 
@@ -57,6 +56,5 @@ public class Instanciador : MonoBehaviour
             }
 
             StartCoroutine(InstanciadorCoroutine());
-        }
     }
 }

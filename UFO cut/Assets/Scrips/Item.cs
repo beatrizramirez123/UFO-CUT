@@ -21,13 +21,13 @@ public class Item : MonoBehaviour
     public float minY;
     public float maxY;
 
-    private float rotDirecao = 50;
+    public float rotDirecao = 50;
 
     // Start is called before the first frame update
     void Start()
     {
-        minY = GerenciarCamera.MinX;
-        maxY = GerenciarCamera.MaxX;
+        minY = GerenciarCamera.MinY;
+        maxY = GerenciarCamera.MaxY;
     }
 
     // Update is called once per frame
@@ -47,6 +47,7 @@ public class Item : MonoBehaviour
         {
             isDead = true;
         }
+
     }
 
     public void InstanciarDestruir()
@@ -62,7 +63,7 @@ public class Item : MonoBehaviour
         tempItemRB.AddTorque(torque);
 
         GameObject tempTinta = Instantiate(tinta, new Vector2(transform.position.x, transform.position.y), transform.rotation);
-        // tempTinta.GetComponent<tinta>().SetColor(red, green, blue, alpha);
+        tempTinta.GetComponent<Tinta>().SetColor(red, green, blue, alpha);
 
         Destroy(gameObject);
     }

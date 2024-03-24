@@ -9,22 +9,32 @@ public class Tinta : MonoBehaviour
     private float red;
     private float green;
     private float blue;
-    SpriteRenderer _renderer;
+    private SpriteRenderer _renderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        _renderer = this.GetComponent<SpriteRenderer>();
-       
-       _renderer.color = new Color (red, green, blue, alpha);
+        _renderer = GetComponent<SpriteRenderer>();
+
+        _renderer.color = new Color(red, green, blue, alpha);
     }
 
     // Update is called once per frame
     void Update()
     {
-        _renderer.color = new Color(red, green, blue, alpha -= speed * Time.deltaTime);
-        if(alpha <= 0)
+        alpha -= speed * Time.deltaTime;
+        _renderer.color = new Color(red, green, blue, alpha);
+        if (alpha <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SetColor(float _red, float _green, float _blue, float _alpha)
+    {
+        red = _red;
+        green = _green;
+        blue = _blue;
+        alpha = _alpha;
     }
 }
