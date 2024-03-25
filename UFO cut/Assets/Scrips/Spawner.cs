@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject enemy;
+   /* public GameObject enemy;
     public float spawnRate = 2f;
-    float nextSpawn;
+    float nextSpawn;*/
 
     void Update()
     {
-        if (Time.time > nextSpawn)
+       /* if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
             Vector2 randomSpawnPosition = new Vector2(Random.Range(-2.5f, 3), 6);
             Instantiate(enemy, randomSpawnPosition, Quaternion.identity);
-        }
+        }*/
       
     }
 }

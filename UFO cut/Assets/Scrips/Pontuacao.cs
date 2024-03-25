@@ -12,7 +12,7 @@ public class Pontuacao : MonoBehaviour
     void Start()
     {
         pontos = 0;
-        GUISkin.text = "0";
+        guiText.text = "0";
         Recorde();
 
     }

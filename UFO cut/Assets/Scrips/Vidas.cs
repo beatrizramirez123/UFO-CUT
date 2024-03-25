@@ -14,7 +14,7 @@ public class Vidas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       GUISkin.skin = Vida[0];//n tem guitext mais cheretei e vi guinskin so n sei se a mesma coisa
+       guiTexture.texture = Vida[0];//n tem guitext mais cheretei e vi guinskin so n sei se a mesma coisa
         tamanhoVidas = Vida.Length;
 
     }
@@ -27,7 +27,7 @@ public class Vidas : MonoBehaviour
     public void Hit()
     {
         ++pontos;
-        GUISkin.skin = pontos.ToString();
+        guiTexture.texture = pontos.ToString();
 
     }
 
@@ -40,7 +40,7 @@ public class Vidas : MonoBehaviour
         if (index < (tamanhoVidas - 1))
         {
             index += 1;
-          GUISkin.texture = Vida[index];
+            guiTexture.texture = Vida[index];
             return true;
         }
         else
