@@ -25,13 +25,13 @@ public class Pontuacao : MonoBehaviour
     public void Hit()
     {
         ++pontos;
-        GUISkin.text = pontos.ToString();
+        guiText.text = pontos.ToString();
     }
     public void Recorde()
     {
         if (pontos > PlayerPrefs.GetInt("Recorde"))
         {
-            PlayerPrefs.SetInt("Recorde ,pontos");
+            PlayerPrefs.GetInt("Recorde ,pontos");
         }
         if (textPontos != null)
         {

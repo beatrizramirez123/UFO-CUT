@@ -152,13 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd07f1061e796347ba98619d86a0824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpawnTime: 1
-  maxSpawnTime: 2
-  upForce: 400
-  leftForce: 200
-  items:
-  - {fileID: 4506829065690816268}
-  - {fileID: 1842454089}
 --- !u!4 &440234190
 Transform:
   m_ObjectHideFlags: 0
@@ -285,7 +278,7 @@ GameObject:
   - component: {fileID: 680880296}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711685516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1639385, y: -0.49189222, z: 0.13330424}
+  m_LocalPosition: {x: -7.86, y: 3.92, z: 0.13330424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -504,6 +497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Borboleta 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3572237552526387434, guid: 123e5354afff3024fb111f41bfa53b0a, type: 3}
+      propertyPath: m_TagString
+      value: Naopode
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 123e5354afff3024fb111f41bfa53b0a, type: 3}
 --- !u!1 &1300146012
@@ -543,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300146012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3236933, y: -0.49646497, z: 0.14291073}
+  m_LocalPosition: {x: 6.24, y: 3.83, z: 0.14291073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

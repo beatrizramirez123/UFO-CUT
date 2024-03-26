@@ -11,10 +11,11 @@ public class Vidas : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     void Start()
     {
-       guiTexture.texture = Vida[0];//n tem guitext mais cheretei e vi guinskin so n sei se a mesma coisa
+       guiTexture.texture = Vida[0];
         tamanhoVidas = Vida.Length;
 
     }

@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
             if (!vidas.Remover())
             {
                 GetComponent<Collider2D>().enabled = false;
-                Invoke("LoadLevel", "4f");
+                Invoke("LoadLevel", 4f);
                 pontos.Recorde();
             }
         }
