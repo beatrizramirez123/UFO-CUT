@@ -493,6 +493,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2446020299240037484, guid: 123e5354afff3024fb111f41bfa53b0a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446020299240037484, guid: 123e5354afff3024fb111f41bfa53b0a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446020299240037484, guid: 123e5354afff3024fb111f41bfa53b0a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3572237552526387434, guid: 123e5354afff3024fb111f41bfa53b0a, type: 3}
       propertyPath: m_Name
       value: Borboleta 1
@@ -831,6 +843,18 @@ PrefabInstance:
     - target: {fileID: 1132552605181979305, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446020299240037484, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8254717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446020299240037484, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8254717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446020299240037484, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3572237552526387434, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
       propertyPath: m_Name
