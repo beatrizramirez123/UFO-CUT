@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Vidas : MonoBehaviour
 {
-    public Texture2D[] Vida;
+    public Sprite[] Vida;
+    Image image;
     private int tamanhoVidas;
     private int index = 0;
     private Pontuacao pontos;
@@ -15,7 +17,8 @@ public class Vidas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       guiTexture.texture = Vida[0];
+        
+        image.sprite = Vida[0];
         tamanhoVidas = Vida.Length;
 
     }
@@ -28,7 +31,7 @@ public class Vidas : MonoBehaviour
     public void Hit()
     {
         ++pontos;
-        guiTexture.texture = pontos.ToString();
+        image.sprite = pontos.ToString();
 
     }
 
@@ -41,7 +44,7 @@ public class Vidas : MonoBehaviour
         if (index < (tamanhoVidas - 1))
         {
             index += 1;
-            guiTexture.texture = Vida[index];
+            image.sprite = Vida[index];
             return true;
         }
         else

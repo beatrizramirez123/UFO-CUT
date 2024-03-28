@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    Image image;
     private Vector3 position;
     private bool morte;
-    private Pontuacao pontos;// troquei pq o Pontos tava dando erro ent eu coisei o pontuacao do awake ai para nao me estressar
+    private Pontuacao pontos;
      private Vidas vidas;
     // private Pause pause;
     //public GameObject gameOver;

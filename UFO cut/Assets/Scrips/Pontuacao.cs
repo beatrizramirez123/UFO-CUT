@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pontuacao : MonoBehaviour
 {
     private int recorde;
     private static int pontos = 0;
     public GameObject textPontos;
+    Image image;
 
     // Start is called before the first frame update
     void Start()
     {
         pontos = 0;
-        guiText.text = "0";
+        image.sprite = "0"; 
         Recorde();
 
     }
@@ -25,7 +27,7 @@ public class Pontuacao : MonoBehaviour
     public void Hit()
     {
         ++pontos;
-        guiText.text = pontos.ToString();
+        image.sprite = pontos.ToString();
     }
     public void Recorde()
     {
@@ -35,7 +37,7 @@ public class Pontuacao : MonoBehaviour
         }
         if (textPontos != null)
         {
-            textPontos.guiText.text = "Recorde:" + "" + PlayerPrefs.GetInt("Recorde").ToString();
+            textPontos.image.sprite = "Recorde:" + "" + PlayerPrefs.GetInt("Recorde").ToString();
 
         }
 

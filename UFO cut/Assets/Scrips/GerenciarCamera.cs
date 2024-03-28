@@ -24,27 +24,27 @@ public class GerenciarCamera : MonoBehaviour
         maxY = cam.ScreenToWorldPoint(new Vector3(0, Screen.height, distanciaZ)).y;
     }
 
-    public static float MinY
+    public static float MinY()
     {
-        get { return minY; }
+          return minY; 
 
     }
 
-    public static float MaxY
+    public static float MaxY()
     {
-        get { return maxY; }
+         return maxY; 
 
     }
 
-    public static float MinX
+    public static float MinX()
     {
-        get { return minX; }
+        return minX; 
 
     }
 
-    public static float MaxX
+    public static float MaxX()
     {
-        get { return maxX; }
+        return maxX; 
 
     }
 
