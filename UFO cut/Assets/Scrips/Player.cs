@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     Image image;
     private Vector3 position;
     private bool morte;
-    private Pontuacao pontos;
-     private Vidas vidas;
+   // private Pontuacao pontos;
+     //private Vidas vidas;
     // private Pause pause;
     //public GameObject gameOver;
     public AudioClip clipCelular;
@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        pontos = GameObject.FindGameObjectWithTag("Pontos").GetComponent<Pontuacao>() as Pontuacao;
-        vidas = GameObject.FindGameObjectWithTag("Vidas").GetComponent<Vidas>() as Vidas;
+       // pontos = GameObject.FindGameObjectWithTag("Pontos").GetComponent<Pontuacao>() as Pontuacao;
+       // vidas = GameObject.FindGameObjectWithTag("Vidas").GetComponent<Vidas>() as Vidas;
     }
     void Start()
     {
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
     {
         if (collisor.tag == "Celular")
         {
-            pontos.Hit();
+           // pontos.Hit();
 
             collisor.GetComponent<Item>().InstanciarDestruir();
             Audio(clipCelular); 
@@ -74,12 +74,12 @@ public class Player : MonoBehaviour
             Audio(clipBorboleta);
             collisor.GetComponent<Inimigo>().Destroy();
            
-            if (!vidas.Remover())
+           /* if (!vidas.Remover())
             {
                 GetComponent<Collider2D>().enabled = false;
                 Invoke("LoadLevel", 4f);
                 pontos.Recorde();
-            }
+            }*/
         }
         }
         void Audio(AudioClip clip)
@@ -88,10 +88,10 @@ public class Player : MonoBehaviour
             
             AudioSource.PlayClipAtPoint(clip, transform.position,0.2f);
         }
-    void LoaldLevel()
+    /*void LoaldLevel()
     {
         Application.LoadLevel("Menu");
-    }
+    }*/
 
     }
 
