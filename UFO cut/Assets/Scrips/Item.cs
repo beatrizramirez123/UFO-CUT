@@ -66,5 +66,8 @@ public class Item : MonoBehaviour
         tempTinta.GetComponent<Tinta>().SetColor(red, green, blue, alpha);
 
         Destroy(gameObject);
+
+
+
     }
 }

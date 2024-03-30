@@ -39,11 +39,13 @@ public class Instanciador : MonoBehaviour
             float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
             yield return new WaitForSeconds(spawnTime);
 
-            if (RandomItem())
-            {
-                int index = Random.Range(0, items.Length);
-                GameObject item = Instantiate(items[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.identity) as GameObject;
+        if (RandomItem())
+        {
+            int index = Random.Range(0, items.Length);
+            GameObject item = Instantiate(items[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.identity) as GameObject;
 
+            if (item != null)
+            {
                 itemRigidbody = item.GetComponent<Rigidbody2D>();
                 if (item.transform.position.x > 0)
                 {
@@ -54,6 +56,7 @@ public class Instanciador : MonoBehaviour
                     itemRigidbody.AddForce(new Vector2(leftForce, upForce));
                 }
             }
+        }   
 
             StartCoroutine(InstanciadorCoroutine());
     }
