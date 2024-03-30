@@ -1,63 +1,71 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Instanciador : MonoBehaviour
 {
+    public GameObject[] itens;
+    GameObject item;
+    int index;
 
     public float minSpawnTime;
     public float maxSpawnTime;
+    public float spawnTime;
+
     public float upForce = 400f;
     public float leftForce = 200f;
-    public GameObject[] items;
+    
 
-    private float minX, maxX;
-    private Rigidbody2D itemRigidbody;
+    private static float minX, maxX;
+
+    public Rigidbody2D cel;
 
     // Start is called before the first frame update
     void Start()
     {
         minX = GerenciarCamera.MinX();
         maxX = GerenciarCamera.MaxX();
-        StartCoroutine(InstanciadorCoroutine());
+        StartCoroutine("InstanciadorCoroutine");
     }
 
     // Update is called once per frame
     private void Update()
     {
-       
+        
     }
 
     bool RandomItem()
     {
-        return items.Length > 0;
+        if(itens.Length > 0)
+        {
+            index = Random.Range(0, itens.Length);
+            return true;
+        }
+        return false;
+        
     }
 
     private IEnumerator InstanciadorCoroutine()
     {
-        
-            float spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
-            yield return new WaitForSeconds(spawnTime);
+        spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
+
+        yield return new WaitForSeconds(spawnTime);
 
         if (RandomItem())
         {
-            int index = Random.Range(0, items.Length);
-            GameObject item = Instantiate(items[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.identity) as GameObject;
+            item = Instantiate(itens[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.Euler(0,0,Random.Range(-60, 60)));
 
-            if (item != null)
+            if (item.transform.position.x > 0)
             {
-                itemRigidbody = item.GetComponent<Rigidbody2D>();
-                if (item.transform.position.x > 0)
-                {
-                    itemRigidbody.AddForce(new Vector2(-leftForce, upForce));
-                }
-                else
-                {
-                    itemRigidbody.AddForce(new Vector2(leftForce, upForce));
-                }
+                cel.AddForce(new Vector2(-leftForce, upForce));
             }
+            
+            else
+            {
+                cel.AddForce(new Vector2(leftForce, upForce));
+            }
+            StartCoroutine("InstanciadorCoroutine");
         }   
 
-            StartCoroutine(InstanciadorCoroutine());
+            
     }
 }
