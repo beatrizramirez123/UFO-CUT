@@ -4,16 +4,17 @@ using UnityEngine;
 public class Instanciador : MonoBehaviour
 {
     public GameObject[] itens;
-    GameObject item;
+    private GameObject item;
     int index;
 
     public float minSpawnTime;
     public float maxSpawnTime;
     public float spawnTime;
 
-    public float upForce = 400f;
+    /*public float upForce = 400f;
     public float leftForce = 200f;
-    
+    public float Force = -200f;*/ 
+
 
     private static float minX, maxX;
 
@@ -22,6 +23,8 @@ public class Instanciador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*cel = GetComponent<Rigidbody2D>();
+        cel.AddForce(transform.up * upForce, ForceMode2D.Impulse);*/
         minX = GerenciarCamera.MinX();
         maxX = GerenciarCamera.MaxX();
         StartCoroutine("InstanciadorCoroutine");
@@ -52,17 +55,21 @@ public class Instanciador : MonoBehaviour
 
         if (RandomItem())
         {
-            item = Instantiate(itens[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.Euler(0,0,Random.Range(-60, 60)));
+            
+            item = Instantiate(itens[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.Euler(0,0,Random.Range(-60, 60))) as GameObject;
 
+            /*print("foi");
             if (item.transform.position.x > 0)
             {
-                cel.AddForce(new Vector2(-leftForce, upForce));
+                print("oi");
+                cel.AddForce(transform.up * upForce, ForceMode2D.Impulse);
             }
             
             else
             {
-                cel.AddForce(new Vector2(leftForce, upForce));
-            }
+                print("2");
+                cel.AddForce(transform.up * upForce, ForceMode2D.Impulse);
+            }*/
             StartCoroutine("InstanciadorCoroutine");
         }   
 
