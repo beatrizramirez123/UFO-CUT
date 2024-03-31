@@ -19,6 +19,7 @@ public class Instanciador : MonoBehaviour
     private static float minX, maxX;
 
     public Rigidbody2D cel;
+    public Rigidbody2D borl;
 
     // Start is called before the first frame update
     void Start()
@@ -63,12 +64,14 @@ public class Instanciador : MonoBehaviour
             {
                 print("oi");
                 cel.AddForce(transform.up * upForce, ForceMode2D.Impulse);
+            borl.AddForce(transform.up * upForce, ForceMode2D.Impulse);
             }
             
             else
             {
                 print("2");
                 cel.AddForce(transform.up * upForce, ForceMode2D.Impulse);
+            borl.AddForce(transform.up * upForce, ForceMode2D.Impulse);
             }*/
             StartCoroutine("InstanciadorCoroutine");
         }   

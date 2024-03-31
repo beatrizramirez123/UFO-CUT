@@ -157,10 +157,8 @@ MonoBehaviour:
   minSpawnTime: 1
   maxSpawnTime: 5
   spawnTime: 0
-  upForce: 400
-  leftForce: 200
-  Force: -200
   cel: {fileID: -7333589051982600234, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
+  borl: {fileID: 1842454090}
 --- !u!4 &440234190
 Transform:
   m_ObjectHideFlags: 0
@@ -733,6 +731,19 @@ MonoBehaviour:
   minY: 0
   maxY: 0
   rotDirecao: 50
+--- !u!114 &1842454098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842454089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec32055bdedb4b4597291579a27b78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 15
 --- !u!1001 &4506829065690816267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -882,9 +893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd752a3da77b5ac44823259ffa4353c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esquerdaItem: {fileID: 1842454089}
-  direitaItem: {fileID: 4506829065690816268}
-  tinta: {fileID: 3572237552526387434, guid: 37163f3fcc904414c8b037f6a33e70e8, type: 3}
+  esquerdaItem: {fileID: 1203872684605497107, guid: 0a749178ed953da4a9199a692b71c545, type: 3}
+  direitaItem: {fileID: 3572237552526387434, guid: 5f58308db65361c4ab752e1dabbff873, type: 3}
+  tinta: {fileID: 0}
   forca: 100
   torque: 50
   alpha: 1
