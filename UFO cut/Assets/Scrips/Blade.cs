@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Blade : MonoBehaviour
 {
-    // public GameObject bladeTrailPrefab;
+    public GameObject bladeTrailPrefab;
     public float minCuttingVelocity = .001f;    
     bool isCutting = false;
 
@@ -13,6 +13,7 @@ public class Blade : MonoBehaviour
     Rigidbody2D rb;
     Camera cam;
     CircleCollider2D circleCollider;
+    //public GameObject celularSlicePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,16 +74,5 @@ public class Blade : MonoBehaviour
            }*/
         circleCollider.enabled = false;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-         if (collision.CompareTag("PodeMata"))
-        {
-            Vector2 direction = (collision.transform.position - transform.position).normalized;
-
-            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
-            Instantiate(Celularfruit.celularSlicePrefab, transform.position, rotation);
-
-            Destroy(gameObject);
-        }
-    }
+   
 }

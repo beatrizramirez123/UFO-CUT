@@ -4,28 +4,20 @@ using UnityEngine;
 
 public class Celularfruit : MonoBehaviour
 {
-    public static GameObject celularSlicePrefab;
-   // Vector2 lastTouchPosition;
-   // public Rigidbody2D body;
-
+    public GameObject celularSlicePrefab;
+    public float force = 15f;
+    Rigidbody2D rb;
     void Start()
     {
-       // body = GetComponent<Rigidbody2D>();
+       rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(transform.up, ForceMode2D.Impulse);
     }
 
 
 
     void Update()
     {
-        /* if (Input.GetButtonDown("Fire1"))
-         {
-             lastTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-         }
-         if (Input.GetButtonUp("Fire1"))
-         {
-             Vector2 newTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-             body.velocity = ((newTouchPosition - lastTouchPosition));
-         */
+
     }
 
 
@@ -37,10 +29,11 @@ public class Celularfruit : MonoBehaviour
             {
                 Vector2 direction = (collision.transform.position - transform.position).normalized;
 
-                Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
-                Instantiate(celularSlicePrefab, transform.position, rotation);
-
+                Quaternion rotation = Quaternion.LookRotation(direction);
+               GameObject sliceCelular = Instantiate(celularSlicePrefab, transform.position, rotation);
+                Destroy(sliceCelular, 3f);
                 Destroy(gameObject);
+
             }
         }
     }
