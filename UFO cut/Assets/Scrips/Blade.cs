@@ -73,4 +73,16 @@ public class Blade : MonoBehaviour
            }*/
         circleCollider.enabled = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         if (collision.CompareTag("PodeMata"))
+        {
+            Vector2 direction = (collision.transform.position - transform.position).normalized;
+
+            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            Instantiate(Celularfruit.celularSlicePrefab, transform.position, rotation);
+
+            Destroy(gameObject);
+        }
+    }
 }
