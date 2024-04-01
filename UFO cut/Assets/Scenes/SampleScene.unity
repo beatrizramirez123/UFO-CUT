@@ -1839,11 +1839,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1132552605181979305, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.75
+      value: -7.15
       objectReference: {fileID: 0}
     - target: {fileID: 1132552605181979305, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.77
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 1132552605181979305, guid: acb4b288277fd1c45a8e5f11fea1a309, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1920,7 +1920,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4506829065690816268}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1950,7 +1950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bac1c08a565f1942ba0bfeb7cc29665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 4506829065690816269}
 --- !u!61 &4506829065690816281
 BoxCollider2D:
   m_ObjectHideFlags: 0
