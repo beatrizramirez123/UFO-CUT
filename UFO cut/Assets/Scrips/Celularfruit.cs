@@ -5,20 +5,8 @@ using UnityEngine;
 public class Celularfruit : MonoBehaviour
 {
     public GameObject celularSlicePrefab;
-    public float force = 15f;
-    Rigidbody2D rb;
-    void Start()
-    {
-       rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.up, ForceMode2D.Impulse);
-    }
 
 
-
-    void Update()
-    {
-
-    }
 
 
 
@@ -27,6 +15,7 @@ public class Celularfruit : MonoBehaviour
         {
             if (collision.CompareTag("Blade"))
             {
+            print("bateu");
                 Vector2 direction = (collision.transform.position - transform.position).normalized;
 
                 Quaternion rotation = Quaternion.LookRotation(direction);

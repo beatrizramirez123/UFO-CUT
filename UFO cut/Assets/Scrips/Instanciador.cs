@@ -19,7 +19,7 @@ public class Instanciador : MonoBehaviour
     private static float minX, maxX;
 
     public Rigidbody2D cel;
-    public Rigidbody2D borl;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +57,7 @@ public class Instanciador : MonoBehaviour
         if (RandomItem())
         {
             
+           
             item = Instantiate(itens[index], new Vector2(Random.Range(minX, maxX), transform.position.y), Quaternion.Euler(0,0,Random.Range(-60, 60))) as GameObject;
 
             /*print("foi");
