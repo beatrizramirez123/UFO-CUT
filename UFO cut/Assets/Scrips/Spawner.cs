@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject enemy;
+    public GameObject NoEnemy;
     public float spawnRate = 2f;
     float nextSpawn;
 

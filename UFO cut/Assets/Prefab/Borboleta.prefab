@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1132552605181979305}
   - component: {fileID: 2446020299240037484}
   - component: {fileID: -7333589051982600234}
-  - component: {fileID: 8267178598920476455}
+  - component: {fileID: 5397694077054001997}
   m_Layer: 0
   m_Name: Borboleta
-  m_TagString: Untagged
+  m_TagString: Naopode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8267178598920476455
+--- !u!114 &5397694077054001997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3572237552526387434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ec32055bdedb4b4597291579a27b78b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bac1c08a565f1942ba0bfeb7cc29665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 15
+  celularSlicePrefab: {fileID: 3572237552526387434}
+  boboletaSlicePrefab2: {fileID: 3572237552526387434}

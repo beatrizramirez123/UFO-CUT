@@ -5,6 +5,7 @@ using UnityEngine;
 public class Celularfruit : MonoBehaviour
 {
     public GameObject celularSlicePrefab;
+    public GameObject boboletaSlicePrefab2;
 
 
 
