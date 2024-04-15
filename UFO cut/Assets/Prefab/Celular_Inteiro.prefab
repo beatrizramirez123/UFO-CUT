@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   celularSlicePrefab: {fileID: 3572237552526387434}
+  boboletaSlicePrefab2: {fileID: 0}
 --- !u!1001 &4506829065104841912
 PrefabInstance:
   m_ObjectHideFlags: 0

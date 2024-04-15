@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 1132552605181979305}
   - component: {fileID: 2446020299240037484}
   - component: {fileID: -7333589051982600234}
-  - component: {fileID: 5397694077054001997}
+  - component: {fileID: 4926772791910059925}
+  - component: {fileID: 9112058416393900903}
   m_Layer: 0
   m_Name: Borboleta
-  m_TagString: Naopode
+  m_TagString: PodeMata
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +108,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5397694077054001997
+--- !u!61 &4926772791910059925
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572237552526387434}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.43, y: 0.41}
+    newSize: {x: 0.62, y: 0.59}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.43, y: 0.41}
+  m_EdgeRadius: 0
+--- !u!114 &9112058416393900903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,8 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3572237552526387434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bac1c08a565f1942ba0bfeb7cc29665, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d41c9f6dc9197a4185a0a91dd09fb2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  celularSlicePrefab: {fileID: 3572237552526387434}
-  boboletaSlicePrefab2: {fileID: 3572237552526387434}
+  boboletaSlicePrefab: {fileID: 3572237552526387434}

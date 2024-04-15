@@ -3,7 +3,8 @@ guid: db31fb1446f5029448330f9c2eafa482
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bladeTrailPrefab: {fileID: 3572237552526387434, guid: 5a1064741f0657e44bc629084305d215, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

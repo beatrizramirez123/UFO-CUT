@@ -5,12 +5,7 @@ using UnityEngine;
 public class Celularfruit : MonoBehaviour
 {
     public GameObject celularSlicePrefab;
-    public GameObject boboletaSlicePrefab2;
-
-
-
-
-
+  
 
         void OnTriggerEnter2D(Collider2D collision)
         {
@@ -21,7 +16,7 @@ public class Celularfruit : MonoBehaviour
 
                 Quaternion rotation = Quaternion.LookRotation(direction);
                GameObject sliceCelular = Instantiate(celularSlicePrefab, transform.position, rotation);
-                Destroy(sliceCelular, 3f);
+            Destroy(sliceCelular, 3f);
                 Destroy(gameObject);
 
             }

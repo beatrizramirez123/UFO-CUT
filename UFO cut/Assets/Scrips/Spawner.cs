@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject enemy;
-    public GameObject NoEnemy;
+    public GameObject[] enemies; // Array contendo os objetos inimigos que você quer spawnar
     public float spawnRate = 2f;
     float nextSpawn;
 
@@ -15,9 +14,8 @@ public class Spawner : MonoBehaviour
         {
             nextSpawn = Time.time + spawnRate;
             Vector2 randomSpawnPosition = new Vector2(Random.Range(-8.5f, 9.8f), 6);
-            Instantiate(enemy, randomSpawnPosition, Quaternion.identity);
-
-            
+            int randomIndex = Random.Range(0, enemies.Length); // Escolhe um índice aleatório do array
+            Instantiate(enemies[randomIndex], randomSpawnPosition, Quaternion.identity);
         }
     }
 }
