@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2446020299240037484}
   - component: {fileID: -7333589051982600234}
   - component: {fileID: 4926772791910059925}
-  - component: {fileID: 9112058416393900903}
+  - component: {fileID: 5065499651851091981}
   m_Layer: 0
   m_Name: Borboleta
   m_TagString: PodeMata
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43, y: 0.41}
   m_EdgeRadius: 0
---- !u!114 &9112058416393900903
+--- !u!114 &5065499651851091981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3572237552526387434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d41c9f6dc9197a4185a0a91dd09fb2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 384261bc35b50c541a7e23d627ee4367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boboletaSlicePrefab: {fileID: 3572237552526387434}
+  heart: {fileID: 0}
