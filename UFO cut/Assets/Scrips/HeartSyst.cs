@@ -8,7 +8,7 @@ public class HeartSyst : MonoBehaviour
     public static HeartSyst Instance;
     public int vida;
     public int vidaMax;
-
+    public GameObject Dead;
     public Image[] coracao;
     public Sprite cheio;
     public Sprite vazio;
@@ -48,6 +48,11 @@ public class HeartSyst : MonoBehaviour
             {
                 coracao[i].enabled = false;
             }
+        }
+        if (vida <= 0)
+        {
+            Dead.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }

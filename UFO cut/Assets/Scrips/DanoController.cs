@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class DanoController : MonoBehaviour
 {
-    public HeartSyst heart;
-   
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "PodeMata")
+        if (collision.gameObject.tag == "Blade")
         {
-            heart.vida--;
+            HeartSyst.Instance.vida--;
         }
     }
 }
