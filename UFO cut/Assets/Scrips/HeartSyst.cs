@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HeartSyst : MonoBehaviour
 {
+    public static HeartSyst Instance;
     public int vida;
     public int vidaMax;
 
@@ -14,7 +15,8 @@ public class HeartSyst : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instance = this;
+        vida = vidaMax;
     }
 
     // Update is called once per frame
