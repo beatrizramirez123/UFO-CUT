@@ -7,7 +7,7 @@ public class Blade : MonoBehaviour
     public GameObject bladeTrailPrefab;
     public float minCuttingVelocity = .001f;    
     bool isCutting = false;
-
+    public static Transform posPlayer;
     GameObject currentBladeTrail;
     Vector2 previusPosition;
     Rigidbody2D rb;
@@ -17,6 +17,7 @@ public class Blade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        posPlayer = transform;
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
         circleCollider = GetComponent<CircleCollider2D>();

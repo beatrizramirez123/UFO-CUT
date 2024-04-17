@@ -24,7 +24,7 @@ public class HeartSyst : MonoBehaviour
     {
         HeartLogic();
     }
-    void HeartLogic()
+    public void HeartLogic()
     {
         if(vida > vidaMax)
         {

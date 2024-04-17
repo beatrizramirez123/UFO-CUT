@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8456775312022215319}
   m_Layer: 0
   m_Name: Borboleta
-  m_TagString: PodeMata
+  m_TagString: Naopode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384261bc35b50c541a7e23d627ee4367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: {fileID: 2164890481500568161, guid: 6bf8c77b48fa3cd48b09b36dfccd36b9, type: 3}
 --- !u!114 &-8456775312022215319
 MonoBehaviour:
   m_ObjectHideFlags: 0
