@@ -15,5 +15,6 @@ public class gameControllerMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+        print("funciona");
     }
 }
